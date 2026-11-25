@@ -1,92 +1,24 @@
-# MyMirro Labs - B2B SaaS Fashion Recommendation Platform
+# MyMirro Labs website · [live](https://my-mirro-labs.vercel.app)
 
-A modern, sleek Next.js website for MyMirro Labs, an AI-powered B2B SaaS platform for fashion recommendations.
+A B2B marketing site for MyMirro Labs' AI fashion-commerce platform. It has a home page, five solution pillar pages, an about page, an FAQ and a working contact form.
 
-## 🚀 Technology Stack
+<table><tr>
+<td width="50%"><img src="docs/screenshots/home.webp" alt="MyMirro Labs home page hero"></td>
+<td width="50%"><img src="docs/screenshots/pillar-ai-styling.webp" alt="AI Styling pillar page"></td>
+</tr><tr><td align="center"><sub>Home</sub></td><td align="center"><sub>AI Styling pillar page</sub></td></tr></table>
 
-- **Next.js 15** - React framework with App Router
-- **TypeScript** - Type-safe development
-- **Tailwind CSS** - Modern utility-first styling
-- **Framer Motion** - Beautiful animations and transitions
-- **React** - Component-based UI
+## Features
+- App Router pages: Home, About, FAQ, Contact, and pillar pages for AI Styling, Catalog Intelligence, Personalized Shopping, Omnichannel and Phygital
+- Reusable sections: Hero, PillarCards, HowItWorks, ValueProposition, Proof, CTA, Navbar, Footer
+- Framer Motion animations and a responsive Tailwind layout
+- Contact form posts to a `/api/contact` route handler, which sends email through **Resend**
 
-## 📁 Project Structure
+## Tech stack
+Next.js 15 · React 19 · TypeScript · Tailwind CSS · Framer Motion · Resend · lucide-react · Vercel
 
-```
-mymirro-labs/
-├── app/                    # Next.js app directory
-│   ├── page.tsx           # Home page
-│   ├── layout.tsx         # Root layout
-│   └── globals.css        # Global styles
-├── components/            # Reusable React components
-│   ├── Navbar.tsx        # Navigation bar
-│   ├── Hero.tsx          # Hero section
-│   ├── Features.tsx      # Features section
-│   └── Footer.tsx        # Footer component
-├── data/                  # Data files (CSV files go here)
-│   └── README.md         # Instructions for CSV placement
-├── lib/                   # Utility functions
-├── public/               # Static assets
-│   └── images/          # Image assets
-└── package.json          # Project dependencies
-```
-
-## 🛠️ Getting Started
-
-### Prerequisites
-
-- Node.js 18+ installed
-- npm or yarn package manager
-
-### Installation & Running
-
-1. Navigate to the project directory:
-```bash
-cd mymirro-labs
-```
-
-2. Install dependencies (already done):
+## Run locally
 ```bash
 npm install
-```
-
-3. Run the development server:
-```bash
+echo "RESEND_API_KEY=..." > .env.local   # see EMAIL_SETUP_GUIDE.md
 npm run dev
 ```
-
-4. Open [http://localhost:3000](http://localhost:3000) in your browser
-
-## 📊 Adding Your Content
-
-Place your CSV file with page content and sections in the `/data` folder. The CSV should contain:
-- Page names
-- Section information
-- Content for each section
-- Any additional metadata
-
-Once you add the CSV file, additional pages and sections can be generated based on that data.
-
-## 🎨 Design Features
-
-- **Modern & Sleek** - Clean, professional B2B SaaS aesthetic
-- **Animated** - Smooth Framer Motion animations throughout
-- **Responsive** - Mobile-first design that works on all devices
-- **Dark Mode** - Automatic dark mode support
-- **Performance** - Optimized with Next.js best practices
-
-## 📄 Current Pages
-
-- **Home** - Landing page with hero, features, and stats
-- Additional pages will be created based on your CSV data
-
-## 🔧 Build for Production
-
-```bash
-npm run build
-npm start
-```
-
-## 📝 License
-
-Copyright © 2025 MyMirro Labs. All rights reserved.
